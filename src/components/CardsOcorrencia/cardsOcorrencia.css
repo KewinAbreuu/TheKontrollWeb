@@ -1,0 +1,113 @@
+
+
+.card-container2{
+    width: 100%;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: #4169E1;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-top: 20px;
+    
+    -webkit-box-shadow: 0px 0px 12px 2px rgba(33,36,38,1);
+-moz-box-shadow: 0px 0px 12px 2px rgba(33,36,38,1);
+box-shadow: 0px 0px 12px 2px rgba(33,36,38,1);
+
+}
+
+.card2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%;
+    width: 100%;
+
+}
+
+.card-info2{
+    /* background: blue; */
+    font-size: 14px;
+    color: white;
+}
+
+.card-info2 .pa2{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-info2 img{
+    width: 45px;
+    
+}
+
+.card-info22{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+}
+.card2 .Barralateral{
+    width: 5px;
+    height: 70px;
+    background-color: #4f4f4f;
+    border-radius: 20px;
+}
+
+#postId{
+    font-size: 12px;
+}
+
+
+.card-info22 img{
+    width: 70px;
+    
+}
+
+.BtnDelete{
+    width: 200px;
+    height: 30px;
+    background-color: #fff;
+    color: #3994d1;
+    border: 0;
+    border-radius: 30px;
+    margin-top: 5px;
+    cursor:pointer
+}
+
+@media screen and (max-width:1100px){
+    .card-container2{
+        width: 95%;
+        height: 130px;
+        margin: 5px 10px 5px 10px;
+        padding: 30px;
+    }
+    .card-info2 .pa2{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .BtnDelete{
+        width: 150px;
+        height: 30px;
+        background-color: #fff;
+        color: #3994d1;
+        border: 0;
+        border-radius: 30px;
+        margin-top: 5px;
+        cursor:pointer
+    }
+    
+.card2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+    width: 100%;
+
+}
+}

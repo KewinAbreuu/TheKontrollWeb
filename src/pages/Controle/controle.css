@@ -1,11 +1,21 @@
-
+.test{
+    background-color: #fff;
+}
+.fora{
+    background-color: #fff;
+    color:#000;
+    width: 200px;
+    align-self: flex-end;
+    margin-right: 20px;
+}
 body{
-    min-height: 100vh;  
+    min-height: 100vh; 
 }
 .Dashboard{
     width: 100%;
     background: #212528 ;
-    min-height: 100vh;   
+    min-height: 100vh;  
+
 }
 
 .corpo{

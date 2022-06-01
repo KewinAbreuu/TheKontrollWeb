@@ -9,6 +9,7 @@
 
     import Card from '../../components/CardsOcorrencia'
 
+    import DateTimePicker from 'react-datetime-picker';
 
     // import './controle.css'
 
@@ -18,6 +19,12 @@ function Ocorrencia() {
 
   const [posts, setPosts] = useState([]);
 
+  const [value, onChange] = useState(new Date())
+
+  
+  // Obtém a data/hora atual
+  let DATINHA =value.toLocaleDateString()
+  console.log(value)
   useEffect(()=>{
    let RefreshPage= localStorage.getItem('PageRefresh');
    if(RefreshPage === 'first'){
@@ -34,8 +41,8 @@ function Ocorrencia() {
     async function loadPost(){
 
       await firebase.firestore().collection('ocorrencias')
+      .where('Date','==',DATINHA)
       .orderBy('Data','desc')
-      // .orderBy('Hora', 'desc')
       .onSnapshot((doc)=>{
         let meusPosts=[];
 
@@ -60,21 +67,10 @@ function Ocorrencia() {
     
     loadPost();
 
-  },[])
+  },[DATINHA])
  
  
 
-  // Obtém a data/hora atual
-  var data = new Date();
-
-  // Guarda cada pedaço em uma variável
-  var dia     = data.getDate();           // 1-31
-  var mes     = data.getMonth();          // 0-11 (zero=janeiro)
-  var ano4    = data.getFullYear();       // 4 dígitos
-
-
-  // Formata a data e a hora (note o mês + 1)
-  var str_data = dia + '/' + (mes+1) + '/' + ano4;
 
  
     return (
@@ -88,7 +84,13 @@ function Ocorrencia() {
 
           <div className='titulo' id='titulo' >
             <h1>Ocorrências</h1>
-            <p className='hora'>{str_data}</p>
+            <DateTimePicker onChange={onChange} value={value}
+              disableClock={true}
+              isClockOpen={true}
+              format="dd-MM-y"
+              calendarClassName="test"
+              className="fora"
+            />
             <p className='hora'>codigo da empresa: {codigoEmpresa}</p>
 
             

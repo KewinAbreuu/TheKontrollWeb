@@ -11,6 +11,11 @@
 
     import DateTimePicker from 'react-datetime-picker';
 
+    import Locale from '../../assets/local.png'
+    import Colaborator from '../../assets/colaborator.png'
+    import Obs from '../../assets/obs.png'
+    import Star from '../../assets/star.png'
+
     import './controle.css'
 
 
@@ -53,7 +58,8 @@ function Controle() {
             hora:item.data().Hora,
             descrição:item.data().Descricao,
             funcionario:item.data().Funcionario,
-            cargo:item.data().Cargo
+            cargo:item.data().Cargo,
+            condicoes:item.data().Condicoes
           })
         });
         
@@ -91,7 +97,7 @@ function Controle() {
               calendarClassName="test"
               className="fora"
             />
-            <p className='hora'>codigo da empresa: {codigoEmpresa}</p>
+            {/* <p className='hora'>codigo da empresa: {codigoEmpresa}</p> */}
 
             
           </div>
@@ -106,13 +112,19 @@ function Controle() {
           {posts.map((post)=>{
             return(
               <li key={post.id}>
-                  <Card local={post.local}
-                   data={post.date}
+                  <Card 
+                    icon1={Locale}
+                    icon2={Colaborator}
+                    icon3={Obs}
+                    icon4={Star}
+                    local={post.local}
+                    data={post.date}
                     hora={post.hora} 
                     id={post.id} 
                     status={post.status}
                     desc={post.descrição}
-                    funcionario={post.cargo + ' ' + post.funcionario}/>
+                    funcionario={post.cargo + ' ' + post.funcionario}
+                    condicoes={post.condicoes}/>
               </li>
             )
           })}

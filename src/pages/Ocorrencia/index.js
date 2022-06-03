@@ -91,7 +91,7 @@ function Ocorrencia() {
               calendarClassName="test"
               className="fora"
             />
-            <p className='hora'>codigo da empresa: {codigoEmpresa}</p>
+            {/* <p className='hora'>codigo da empresa: {codigoEmpresa}</p> */}
 
             
           </div>

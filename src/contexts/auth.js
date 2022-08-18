@@ -42,7 +42,6 @@ export default function AuthProvider({children}){
                 nome:nome,
                 avatarUrl:null,
                 email: email,
-                codigoEmpresa:"123"
             })
 
             .then(()=>{
@@ -99,7 +98,6 @@ export default function AuthProvider({children}){
             //     codigoEmpresa:userProfile.data().codigoEmpresa,
             // };
             setUser(data);
-            storageCodigoEmpresa(userProfile.data().codigoEmpresa)
             storageUser(data);
             setLoadingAuth(false);
             

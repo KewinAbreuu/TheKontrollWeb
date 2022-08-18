@@ -1,22 +1,22 @@
 
-    import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-    import Navbar from '../../components/Navbar/Navbar';
+import Navbar from '../../components/Navbar/Navbar';
 
-    import Avatar from '../../assets/avatar.svg'
+import Avatar from '../../assets/avatar.svg'
 
-    import firebase from "../../services/firebaseConect";
+import firebase from "../../services/firebaseConect";
 
-    import Card from '../../components/Cards'
+import Card from '../../components/Cards'
 
-    import DateTimePicker from 'react-datetime-picker';
+import DateTimePicker from 'react-datetime-picker';
 
-    import Locale from '../../assets/local.png'
-    import Colaborator from '../../assets/colaborator.png'
-    import Obs from '../../assets/obs.png'
-    import Star from '../../assets/star.png'
+import Locale from '../../assets/local.png'
+import Colaborator from '../../assets/colaborator.png'
+import Obs from '../../assets/obs.png'
+import Star from '../../assets/star.png'
 
-    import './controle.css'
+import './controle.css'
 
 
 
@@ -25,16 +25,6 @@ function Controle() {
   const [posts, setPosts] = useState([]);
 
   const [value, onChange] = useState(new Date())
-
-
-  useEffect(()=>{
-   let RefreshPage= localStorage.getItem('PageRefresh');
-   if(RefreshPage === 'first'){
-     localStorage.setItem('PageRefresh',1)
-     window.location.assign("https://shimmering-pithivier-dbee84.netlify.app")
-    //  window.location.reload();
-   }
-  },[])
 
 
   let DATINHA =value.toLocaleDateString()
@@ -75,10 +65,6 @@ function Controle() {
   },[value])
  
  
-
-  
-
- 
     return (
       
       <div className="Dashboard">
@@ -98,7 +84,6 @@ function Controle() {
               className="fora"
             />
             {/* <p className='hora'>codigo da empresa: {codigoEmpresa}</p> */}
-
             
           </div>
             
@@ -129,9 +114,6 @@ function Controle() {
             )
           })}
         </ul>
-
- 
-      
 
         </div>  
        

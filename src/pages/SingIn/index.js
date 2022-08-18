@@ -1,22 +1,15 @@
 
 import './signIn.css'
 import Wave from '../../assets/wave.png';
-import Bg from '../../assets/bg.svg';
 import Bg2 from '../../assets/bg2.svg';
 import Avatar from '../../assets/avatar.svg';
 import { Link } from 'react-router-dom';
 
-import { useState, useContext, useEffect} from 'react';
+import { useState, useContext} from 'react';
 import { AuthContext } from '../../contexts/auth';
 
 
 function SignIn() {
-
-	useEffect(()=>{
-		localStorage.setItem('CodigoEmpresa', '123')
-		localStorage.setItem('PageRefresh','first')
-	},[])
-
 	const{ signIn, loadingAuth }=useContext(AuthContext);
 
 	const[email, setEmail] =useState('');

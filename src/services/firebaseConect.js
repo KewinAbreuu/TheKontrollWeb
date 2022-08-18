@@ -18,12 +18,12 @@
       appId: "1:43910768183:web:33c4d28029359f570c41b2"
     },
     352847: {
-      apiKey: "AIzaSyAl82OCwHzXeeI9H5pF1nBTGTBS3k2rktQ",
-      authDomain: "kontrolllife-b4a16.firebaseapp.com",
-      projectId: "kontrolllife-b4a16",
-      storageBucket: "kontrolllife-b4a16.appspot.com",
-      messagingSenderId: "412857269676",
-      appId: "1:412857269676:web:bcdf4d4f5aaff2c3a04e09"
+      apiKey: 'AIzaSyCeSm8gTkUJex1B66GVkZN1vrb8bt_xJmU',
+      authDomain: 'louvoradvec-47c63.firebaseapp.com',
+      projectId: 'louvoradvec-47c63',
+      storageBucket: 'louvoradvec-47c63.appspot.com',
+      messagingSenderId: '339701795039',
+      appId: '1:339701795039:web:7967bc9508cbeabdcbc16a'
     }
   }
   let companyId = localStorage.getItem('CodigoEmpresa');

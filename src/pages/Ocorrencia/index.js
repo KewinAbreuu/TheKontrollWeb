@@ -11,9 +11,6 @@
 
     import DateTimePicker from 'react-datetime-picker';
 
-    // import './controle.css'
-
-
 
 function Ocorrencia() {
 

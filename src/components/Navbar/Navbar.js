@@ -117,6 +117,11 @@ function Pdf(){
                <span>Suporte</span> 
             </Link>
 
+            <Link to="/config" >
+                <BsInfoSquareFill  size="24" className='icon'/>
+               <span>Configurações</span> 
+            </Link>
+
 
             </div>
             <button onClick={signOut} className="botao">Sair</button>

@@ -64,6 +64,30 @@ function Controle() {
 
   },[value])
  
+
+  async function Config(){
+    await firebase.firestore().collection('config')
+    .add({
+      Apoio: 1,
+      Corresp: 1,
+      Dispositivos: 1,
+      Ocorrencias: 1,
+      Ronda: 1,
+      Pagamento: 1,
+      NameApoio:'',
+      NameCorresp:'',
+      NameDispositivos:'',
+      NameOcorrencias:'',
+      NameRonda:'',
+
+    })
+    .then(()=>{
+      alert('Configurações Adicionadas com Sucesso!')
+    })
+    .catch((e)=>{
+      alert(e)
+    })
+  }
  
     return (
       
@@ -84,6 +108,8 @@ function Controle() {
               className="fora"
             />
             <p className='hora'>codigo da empresa: {codigoEmpresa}</p>
+
+            {/* <button onClick={Config}>AddConfig</button> */}
             
           </div>
             

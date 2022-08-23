@@ -6,7 +6,7 @@ import Avatar from '../../assets/avatar.svg';
 
 import {useEffect,useState} from 'react'
 
-import { BsFillShieldFill, BsBookFill, BsInfoSquareFill, BsFillLayersFill } from "react-icons/bs";
+import { BsFillShieldFill, BsBookFill, BsInfoSquareFill, BsFillLayersFill,BsFillGearFill } from "react-icons/bs";
 
 
 export default function Navbar(){
@@ -15,10 +15,7 @@ export default function Navbar(){
 
     const [visible,setVisible] = useState(true);
     const [confUser,setConfUser] = useState(false);
-    // const [pop,setPop]=useState(true);
     
-
-  
 
 // -----------------------------------------------------------------
     useEffect(()=>{
@@ -38,20 +35,6 @@ export default function Navbar(){
         }
     }
 
-// // PARA USAR BASTA => setPop(!pop)
-//     useEffect(()=>{
-//         PopUpF();
-//     },[pop])
-
-
-//     function PopUpF(){
-//         if(pop === true){
-//             document.querySelector('.popUp').setAttribute('id', 'popUpEsconde');
-//         }else{
-//             document.querySelector('.popUp').removeAttribute('id', 'popUpEsconde');
-//         }
-//     }
-// // -----------------------------------------------------------------
 
 function whats(){
     window.location.href = 'https://api.whatsapp.com/send?phone=5582981129518&text=Preciso%20de%20ajuda!'
@@ -118,7 +101,7 @@ function Pdf(){
             </Link>
 
             <Link to="/config" >
-                <BsInfoSquareFill  size="24" className='icon'/>
+                <BsFillGearFill  size="24" className='icon'/>
                <span>Configurações</span> 
             </Link>
 

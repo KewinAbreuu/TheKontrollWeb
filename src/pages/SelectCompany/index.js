@@ -44,9 +44,9 @@ return (
 
 							<select className="select" onChange={(e) => setValor(e.target.value)}>
 								<option value="" disabled selected>Selecione sua Empresa</option>
-								<option value="123">Life kontroll</option>
-								<option value="352847">Advec</option>
-								<option value="352844">Teste</option>
+								<option value="123">KSA</option>
+								<option value="352847">LIFE TERCEIRIZAÇÃO - Edf. Alameda dos Nobres</option>
+								<option value="352844">THEKONTROLL - Teste</option>
 							</select>
 
 							{!controlBtn && <button onClick={handlleValueCompanyId} className="btn">{valor === '' ? '...' : 'Confirmar'}</button>}

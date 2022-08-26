@@ -47,7 +47,7 @@ export default function Config() {
             {posts.map((post) => {
                 if(post.Apoio === 1){
                   return(
-                    <CardsConfig name='Apoios' icon={apoio}/>
+                    <CardsConfig name='Apoios' icon={apoio} local='/configApoios'/>
                   )
                 }
             })}
